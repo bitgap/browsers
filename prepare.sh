@@ -11,6 +11,8 @@ rm google-chrome-stable_current_amd64.deb
 
 ./google-chrome
 
+sudo ln -s /usr/bin/google-chrome /usr/bin/chrome
+
 
 sudo apt install -y curl jq openvpn
 
