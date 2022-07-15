@@ -11,7 +11,7 @@ rm google-chrome-stable_current_amd64.deb
 
 
 
-sudo apt install -y curl jq 
+sudo apt install -y curl jq openvpn
 
 version="$(curl -s https://aus1.torproject.org/torbrowser/update_3/release/downloads.json | jq -r ".version")"
 
