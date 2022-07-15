@@ -19,3 +19,5 @@ version="$(curl -s https://aus1.torproject.org/torbrowser/update_3/release/downl
 wget -O - "https://dist.torproject.org/torbrowser/"$version"/tor-browser-linux64-"$version"_en-US.tar.xz" | tar xvJ
 
 ./tor-browser_en-US/start-tor-browser.desktop
+
+sudo ln -s $(pwd)/tor-browser_en-US/Browser/start-tor-browser  /bin/tor
