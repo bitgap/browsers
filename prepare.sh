@@ -11,7 +11,8 @@ rm google-chrome-stable_current_amd64.deb
 
 ./google-chrome
 
-sudo ln -s /usr/bin/google-chrome /usr/bin/chrome
+echo "google-chrome & disown" | sudo tee /bin/chrome
+
 
 
 sudo apt install -y curl jq openvpn
@@ -22,4 +23,4 @@ wget -O - "https://dist.torproject.org/torbrowser/"$version"/tor-browser-linux64
 
 ./tor-browser_en-US/start-tor-browser.desktop
 
-sudo ln -s $(pwd)/tor-browser_en-US/Browser/start-tor-browser  /bin/tor
+echo "$(pwd)/tor-browser_en-US/Browser/start-tor-browser & disown" | sudo tee /bin/tor
