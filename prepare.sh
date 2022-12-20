@@ -23,8 +23,8 @@ version="$(curl -s https://aus1.torproject.org/torbrowser/update_3/release/downl
 
 wget -O - "https://dist.torproject.org/torbrowser/"$version"/tor-browser-linux64-"$version"_ALL.tar.xz" | tar xvJ
 
-./tor-browser_en-US/start-tor-browser.desktop
+./tor-browser/start-tor-browser.desktop
 
-echo "$(pwd)/tor-browser_en-US/Browser/start-tor-browser & disown" | sudo tee /bin/tor
+echo "$(pwd)/tor-browser/Browser/start-tor-browser & disown" | sudo tee /bin/tor
 
 sudo chmod +x /bin/tor
