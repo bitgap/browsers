@@ -38,10 +38,9 @@ sudo chmod +x /bin/chrome
 
 sudo apt install -y curl jq openvpn
 
+LINK=$(curl -s https://aus1.torproject.org/torbrowser/update_3/release/downloads.json | jq -r '.downloads."linux-x86_64".ALL.binary')
 
-version="$(curl -s https://aus1.torproject.org/torbrowser/update_3/release/downloads.json | jq -r ".version")"
-
-wget -O - "https://dist.torproject.org/torbrowser/"$version"/tor-browser-linux64-"$version"_ALL.tar.xz" | tar xvJ
+wget -O - "$LINK" | tar xvJ
 
 ./tor-browser/start-tor-browser.desktop
 
